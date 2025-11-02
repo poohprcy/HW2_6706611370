@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThaiMart - สมัครสมาชิก</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 70%;
+      margin: auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      text-align: left;
+      font-weight: 500;
+      color: #004d40;
+    }
+
+    input,
+    textarea,
+    select {
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      background: linear-gradient(90deg, #00796b, #43a047);
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background: linear-gradient(90deg, #004d40, #2e7d32);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="gridcontainer">
+    <!-- Header -->
+    <div class="item-H item">
+      <img src="image/logo.png" alt="โลโก้ ThaiMart" class="logo">
+      <h1>ThaiMart</h1>
+      <p>สมัครสมาชิกเพื่อรับสิทธิพิเศษ</p>
+    </div>
+
+    <!-- Left Sidebar -->
+    <div class="item-L item">
+      <h3>เมนูหลัก</h3>
+      <a href="index.html" class="menu-link">หน้าแรก</a>
+    </div>
+
+    <!-- Main -->
+    <div class="item-M item">
+      <h2>&#128203 แบบฟอร์มสมัครสมาชิก</h2>
+      <form action="https://httpbin.org/post" method="post">
+        <label>ชื่อ-สกุล:</label>
+        <input type="text" name="fullname" required>
+
+        <label>เพศ:</label>
+        <select name="gender">
+          <option value="ชาย">ชาย</option>
+          <option value="หญิง">หญิง</option>
+          <option value="อื่นๆ">อื่นๆ</option>
+        </select>
+
+        <label>วันเดือนปีเกิด:</label>
+        <input type="date" name="birthdate">
+
+        <label>เบอร์โทรศัพท์:</label>
+        <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="เช่น 0812345678">
+
+        <label>อีเมล:</label>
+        <input type="email" name="email" required>
+
+        <label>ที่อยู่จัดส่ง:</label>
+        <textarea name="address" rows="3" placeholder="กรอกที่อยู่สำหรับจัดส่งสินค้า"></textarea>
+
+        <input type="submit" value="ส่งข้อมูลสมัครสมาชิก">
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="item-F item">
+      <address>
+        ThaiMart Co., Ltd. | 123 ถนนสุขุมวิท แขวงคลองเตย กรุงเทพฯ<br>
+        Tel: 02-123-4567 | Email: thaimart@corp.co.th<br>
+      </address>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThaiMart - หน้าหลัก</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+
+  <style>
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      padding: 15px;
+    }
+
+    .product {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      transition: 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 220px;
+      background: #e8f5e9;
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+    }
+
+
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .product h4 {
+      margin-top: 10px;
+      color: #00796b;
+      font-weight: 600;
+    }
+
+    .product p {
+      color: #444;
+      margin: 4px 0;
+    }
+
+    .product input[type="number"] {
+      width: 55px;
+      padding: 3px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+
+    .submit-btn {
+      display: block;
+      margin: 25px auto;
+      background: linear-gradient(90deg, #00796b, #43a047);
+      color: white;
+      padding: 8px 18px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+      background: linear-gradient(90deg, #004d40, #2e7d32);
+      transform: scale(1.05);
+    }
+
+
+    .category-title {
+      text-align: left;
+      color: #004d40;
+      border-left: 5px solid #43a047;
+      padding-left: 10px;
+      margin-top: 25px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="gridcontainer">
+
+    <div class="item-H item">
+      <img src="image/logo.png" class="logo">
+      <h1>ThaiMart</h1>
+      <p>ห้างค้าปลีกทันสมัย เพื่อคนไทย</p>
+    </div>
+
+
+    <div class="item-L item">
+      <h3>เมนูหลัก</h3>
+      <a href="register.html" class="menu-link">สมัครสมาชิก</a>
+    </div>
+
+
+    <div class="item-M item">
+      <h2>🛍️ สินค้าขายดี</h2>
+
+      <form action="https://httpbin.org/post" method="post">
+
+
+        <h3 class="category-title"> &#129385 เนื้อสดและอาหารทะเล</h3>
+        <div class="product-grid">
+          <div class="product">
+            <img src="image/pork.jpg">
+            <h4>หมูสามชั้น</h4>
+            <p>ราคา: 200 บาท</p>
+            <label>จำนวน:</label>
+            <input type="number" name="pork" min="1" max="10">
+          </div>
+          <div class="product">
+            <img src="image/shrimp.jpeg">
+            <h4>กุ้งขาวแช่แข็ง</h4>
+            <p>ราคา: 250 บาท</p>
+            <label>จำนวน:</label>
+            <input type="number" name="shrimp" min="1" max="10">
+          </div>
+        </div>
+
+
+        <h3 class="category-title"> &#129380 เครื่องดื่ม</h3>
+        <div class="product-grid">
+          <div class="product">
+            <img src="image/milk.jpeg">
+            <h4>นมสด UHT</h4>
+            <p>ราคา: 15 บาท</p>
+            <label>จำนวน:</label>
+            <input type="number" name="milk" min="1" max="10">
+          </div>
+         <div class="product">
+            <img src="image/coffee.jpg">
+            <h4>กาแฟ</h4>
+            <p>ราคา: 45 บาท</p>
+            <label>จำนวน:</label>
+            <input type="number" name="coffee" min="1" max="10">
+          </div>
+        </div>
+
+        <h3 class="category-title">🧴 ของใช้ในครัวเรือน</h3>
+        <div class="product-grid">
+          <div class="product">
+            <img src="image/dishwashing.jpg">
+            <h4>น้ำยาล้างจาน</h4>
+            <p>ราคา: 35 บาท</p>
+            จำนวน: <input type="number" name="dishwashing liquid" min="1" max="10">
+          </div>
+          <div class="product">
+            <img src="image/breeze.jpg">
+            <h4>ผงซักฟอก breeze</h4>
+            <p>ราคา: 85 บาท</p>
+            <label>จำนวน:</label>
+            <input type="number" name="washing powder" min="1" max="10">
+          </div>
+        </div>
+
+
+        <h3 class="category-title">🧼 ผลิตภัณฑ์ดูแลร่างกาย</h3>
+        <div class="product-grid">
+          <div class="product">
+            <img src="image/soap.jpg">
+            <h4>ครีมอาบน้ำ</h4>
+            <p>ราคา: 65 บาท</p>
+            จำนวน: <input type="number" name="soap" min="1" max="10">
+          </div>
+          <div class="product">
+            <img src="image/toothpaste.jpg">
+            <h4>ยาสีฟัน</h4>
+            <p>ราคา: 65 บาท</p>
+            <label>จำนวน:</label>
+            <input type="number" name="rice" min="1" max="10">
+          </div>
+        </div>
+
+        <h3 class="category-title">🧼 ผลิตภัณฑ์ดูแลผิวหน้า</h3>
+        <div class="product-grid">
+          <div class="product">
+            <img src="image/sunscreen.jpg">
+            <h4>ครีมกันแดด</h4>
+            <p>ราคา: 75 บาท</p>
+            จำนวน: <input type="number" name="sunscreen" min="1" max="10">
+          </div>
+          <div class="product">
+            <img src="image/foam.jpg">
+            <h4>โฟมล้างหน้า</h4>
+            <p>ราคา: 65 บาท</p>
+            <label>จำนวน:</label>
+            <input type="number" name="cleansing foam" min="1" max="10">
+          </div>
+        </div>
+
+        <h3 class="category-title">🥫 ของแห้งและเครื่องปรุง</h3>
+        <div class="product-grid">
+          <div class="product">
+            <img src="image/chilli sauce.png">
+            <h4>ซอสพริกศรีราชา</h4>
+            <p>ราคา: 60 บาท</p>
+            <label>จำนวน:</label>
+            <input type="number" name="chilli sauce" min="1" max="10">
+          </div>
+          <div class="product">
+            <img src="image/rice.jpg">
+            <h4>ข้าวหอมมะลิ</h4>
+            <p>ราคา: 250 บาท</p>
+            <label>จำนวน:</label>
+            <input type="number" name="rice" min="1" max="10">
+          </div>
+        </div>
+
+         <h3 class="category-title">&#127838 เบเกอรี่และขนมปัง</h3>
+        <div class="product-grid">
+          <div class="product">
+            <img src="image/bread.jpg">
+            <h4>ขนมปังแผ่น</h4>
+            <p>ราคา: 40 บาท</p>
+            <label>จำนวน:</label>
+            <input type="number" name="bread" min="1" max="10">
+          </div>
+          <div class="product">
+            <img src="image/bananacake.jpg">
+            <h4>เค้กกล้วยหอม</h4>
+            <p>ราคา: 50 บาท</p>
+            <label>จำนวน:</label>
+            <input type="number" name="bananacake" min="1" max="10">
+          </div>
+        </div>
+
+           
+         <h3 class="category-title">🍜 อาหารกึ่งสำเร็จรูป</h3>
+        <div class="product-grid">
+          <div class="product">
+            <img src="image/noodles.jpg">
+            <h4>บะหมี่กึ่งสำเร็จรูป</h4>
+            <p>ราคา: 60 บาท</p>
+            <label>จำนวน:</label>
+            <input type="number" name="noodles" min="1" max="10">
+          </div>
+          <div class="product">
+            <img src="image/fishcan.png">
+            <h4>ปลากระป๋องโรซ่า</h4>
+            <p>ราคา: 50 บาท</p>
+            <label>จำนวน:</label>
+            <input type="number" name="fishcan" min="1" max="10">
+          </div>
+        </div>
+
+
+        <input type="submit" value="ส่งข้อมูลการสั่งซื้อ" class="submit-btn">
+      </form>
+    </div>
+
+
+    <div class="item-F item">
+      <address>
+        ThaiMart Co., Ltd. | 123 ถนนสุขุมวิท แขวงคลองเตย กรุงเทพฯ<br>
+        Tel: 02-123-4567 | Email: thaimart@corp.co.th<br>
+      </address>
+    </div>
+  </div>
+</body>
+
+</html>
